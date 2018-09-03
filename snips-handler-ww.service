@@ -1,0 +1,13 @@
+[Unit]
+Description=Snips Handler WW
+After=network.target
+
+[Service]
+User=respeaker
+Group=respeaker
+ExecStart=/usr/bin/python /usr/share/snips/handler/handly-ww.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
